@@ -1,0 +1,65 @@
+# --- LaTeX build files (Overleaf builds its own) ---
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.synctex.gz
+*.synctex(busy)
+/*.pdf
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.ruff_cache/
+
+# --- Outputs (regenerable) ---
+data/
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.nc
+*.dat
+VAR*
+var.dat
+
+# --- Pencil Code run directories ---
+# Track run inputs (*.in, src/*.local, explicitly listed modified sources);
+# everything else in a run's src/ is a symlink or build product.
+runs/**/src/*
+!runs/**/src/Makefile.local
+!runs/**/src/cparam.local
+runs/**/src/**/*.o
+runs/**/src/**/*.mod
+runs/**/src/**/*.x
+# generated run-state files
+COMPLETED
+LOCK
+ERROR
+STOP
+RELOAD
+FULLSTOP
+pc_commands.log
+reference_link.txt.tmp
+*.pid
+# shared executables per resolution template
+runs/**/bin/
+
+# --- Editors / OS ---
+*~
+*.swp
+.DS_Store
+.vscode/
+.idea/
