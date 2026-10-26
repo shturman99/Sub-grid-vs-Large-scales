@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Sub grid vs Large scales}
+\title{Large-scale simulations and subgrid modeling of MHD}
+%\author{Murman Gurgenidze}
+\date{October 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Description}
+Magnetic fields born in the early universe could explain the magnetism we observe today between galaxies, and they could leave a gravitational-wave signal that LISA may detect. Every prediction for these fields, however, comes from simulations that run at Reynolds numbers many orders of magnitude below physical reality. The physics that governs their large-scale evolution, including magnetic reconnection, viscosity, resistivity, and chiral effects, happens at scales no simulation can resolve.
+
+Non-linear physics play a crucial role in the dynamics of the primordial
+plasma and magnetic fields in the early Universe, which can be commonly described
+by magnetohydrodynamics.
+Due to the extreme separation of scales between the size of the observable Universe and
+the viscous and diffusive damping scales, fluid and magnetic field perturbations
+present very large Reynolds and magnetic Reynolds number, requiring an extremely large
+separation of scales to study the full non-linear system via Direct Numerical
+Simulation (DNS).
+
+The purpose of this project is to run high-fidelity simulations to study the 
+impact of the dynamics at small scales into the dynamical evolution of the fields
+at large scales.
+Training neural networks with high-fidelity simulations, the objective is to make 
+predictions and correct low-fidelity simulations that require much less computational
+resources via training of the subgrid dynamics.
+In particular, we will focus on understanding the dynamics of turbulence, as well
+as physics that can only be described at small scales like, for example, magnetic reconnection.
+
+The results are crucial for predicting the dynamical evolution of primordial magnetic
+fields during the early Universe, which could serve as the seed for intergalactic
+magnetic fields that are observed at the cosmic voids of the Large Scale Structure
+in our current-day Universe.
+Furthermore, understanding the turbulence dynamics of fluid and magnetic fields would
+provide us with robust and accurate predictions of the resulting gravitational spectrum,
+which could be probed by current and future gravitational wave experiments
+like LISA or Pulsar Timing Array observations, providing us a unique opportunity to test
+the physics at high energies, potentially probing beyond the Standard Model physics,
+in an unprecedented way.
+
+We will answer a question the field has not settled: which large-scale predictions survive this unresolved physics, and which are numerical artifacts? First, controlled simulations will isolate where non-ideal subgrid processes, especially reconnection, set the decay laws and correlation lengths of primordial turbulence. Second, we will build AI closures that respect the underlying physics: they conserve magnetic helicity, they capture energy flowing from small to large scales, and they are trained through differentiable solvers so they stay stable inside simulations. Symbolic regression will then distill these closures into interpretable equations that can be extrapolated with confidence.
+
+The result will be predictions for primordial magnetic fields and gravitational waves with honest uncertainties, together with open tools that also serve solar, astrophysical, and fusion plasma research.
+\end{document}
